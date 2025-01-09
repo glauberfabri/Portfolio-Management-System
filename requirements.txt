@@ -1,0 +1,5 @@
+fastapi
+sqlalchemy
+boto3
+pyspark
+gurobipy

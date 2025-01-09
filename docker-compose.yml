@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: portfolio_db
+    ports:
+      - "5432:5432"
+  mongo:
+    image: mongo:4.4
+    ports:
+      - "27017:27017"
